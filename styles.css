@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg,#2d00f7,#d100d1,#f20089);
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #000000;
+    padding: 24px;
+}
+
+.sidebar .logo img {
+    width: 120px;
+    height: 80px;
+}
+
+.sidebar .navigation ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar .navigation ul li {
+    padding: 10px 0px;
+}
+
+.sidebar .navigation ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.sidebar .navigation ul li .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sidebar .navigation ul li a:hover {
+    color: #ffffff;
+}
+
+.sidebar .policies {
+    position: absolute;
+    bottom: 100px;
+}
+
+.sidebar .policies ul {
+    list-style: none;
+}
+
+.sidebar .policies ul li {
+    padding-bottom: 5px;
+}
+
+.sidebar .policies ul li a {
+    color: #b3b3b3;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.sidebar .policies ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-container {
+    margin-left: 350px;
+    margin-bottom: 100px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 14px 30px;
+}
+
+.topbar .prev-next-buttons button {
+    color: #7a7a7a;
+    cursor: not-allowed;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0px;
+    background-color: #090909;
+    margin-right: 10px;
+}
+
+.topbar .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .navbar ul {
+    list-style: none;
+}
+
+.topbar .navbar ul li {
+    display: inline-block;
+    margin: 0px 8px;
+    width: 70px;
+}
+
+.topbar .navbar ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.topbar .navbar ul li a:hover {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.spotify-playlists {
+    padding: 20px px;
+}
+
+.spotify-playlists h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.spotify-playlists .list {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.spotify-playlists .list .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.spotify-playlists .list .item:hover {
+    background-color: #252525;
+}
+
+.spotify-playlists .list .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.spotify-playlists .list .item .play {
+    position: relative;
+}
+
+.spotify-playlists .list .item .play .fa {
+    position: absolute;
+    right: 10px;
+    top: -60px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.spotify-playlists .list .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.spotify-playlists .list .item h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spotify-playlists .list .item p {
+    color: #989898;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.spotify-playlists hr {
+    margin: 70px 0px 0px;
+    border-color: #636363;
+}
+
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview h6 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.preview p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#search {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+}
+
+#searchButton, #prevButton, #playPauseButton, #nextButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1db954;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#searchButton:hover, #prevButton:hover, #playPauseButton:hover, #nextButton:hover {
+    background-color: #1ed760;
+}
+
+#prevButton:hover, #playPauseButton:hover, #nextButton:hover {
+    transform: scale(1.05);
+}
+
+#results, #recentSearches, #playlistList {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    background-color: #181818;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.result-item, .recent-search-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #181818;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.result-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recent-search-item {
+    background-color: #282828;
+}
+
+#audioPlayer {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+#playlistList {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#playlistList li {
+    padding: 8px;
+    background-color: #181818;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#playlistList li:hover {
+    background-color: #282828;
+}
+
+#albumImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #090909;
+    color: #7a7a7a;
+    cursor: not-allowed;
+}
+
+.audio-player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #282828;
+    opacity: 80%;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.audio-player-container .controls button {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.audio-player-container .controls button:hover {
+    color: #1db954;
+}
+
+.audio-player-container .track-info {
+    display: flex;
+    align-items: center;
+}
+
+.audio-player-container .track-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.audio-player-container .track-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-player-container .track-info .track-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.audio-player-container .track-info .track-artist {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+audio {
+    width: 100%;
+    margin: 0;
+}
+
+#prevButton, #playPauseButton, #nextButton {
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #b91414;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+   /* Button_topbar_wale_ki_Styles */
+   .topbar button {
+    padding: 12px 24px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login_wale_Button_ki_Style */
+.topbar #loginButton {
+    background-color: rgba(0,0,0,0.2); 
+    size: 40px;
+    font-size: small;
+    align-items: center;
+}
+
+.topbar #loginButton:hover {
+    background-color: rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+.topbar #loginButton:active {
+    background-color: rgba(0,0,0,0.2); 
+}
+
+/* Signup_wale_Button_ki_Style */
+.topbar #signupButton {
+    background-color:rgba(0,0,0,0.2) ; 
+}
+

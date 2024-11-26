@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Songs</title>
+    <style>
+        body {
+    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .album-cover {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .song-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .song-title {
+            font-size: 1.2em;
+            color: #333;
+            margin: 0;
+        }
+
+        .song-artist {
+            font-size: 1em;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Liked Songs</h1>
+            <a href="index.html" class="back-link">Back to Player</a>
+        </header>
+        <main>
+            <ul id="liked-song-list" class="song-list"></ul>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const likedSongList = document.getElementById('liked-song-list');
+            const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+
+            if (likedSongs.length === 0) {
+                likedSongList.innerHTML = '<li>No liked songs yet.</li>';
+                return;
+            }
+
+            likedSongs.forEach(song => {
+                const listItem = document.createElement('li');
+                listItem.className = 'song-item';
+
+                const albumCover = document.createElement('img');
+                albumCover.src = song.albumImage;
+                albumCover.alt = `${song.name} Album Cover`;
+                albumCover.className = 'album-cover';
+
+                const songInfo = document.createElement('div');
+                songInfo.className = 'song-info';
+
+                const songTitle = document.createElement('h2');
+                songTitle.className = 'song-title';
+                songTitle.innerText = song.name;
+
+                const songArtist = document.createElement('p');
+                songArtist.className = 'song-artist';
+                songArtist.innerText = song.artists;
+
+                songInfo.appendChild(songTitle);
+                songInfo.appendChild(songArtist);
+                listItem.appendChild(albumCover);
+                listItem.appendChild(songInfo);
+                likedSongList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

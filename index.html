@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhoom Machale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <a href="">
+                <img src="./images/club22.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <input type="text" id="search" placeholder="Search for a song or artist">
+                    <button id="searchButton">Search</button>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-bookmark"></span>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="like.html" class="liked-songs-link">
+                        <span class="fa fa-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>
+                </header>
+                
+                <main>
+                    <ul id="song-list" class="song-list"></ul>
+                </main>
+                </li>
+                <li>
+                    <a href="playlist.html" class="playlist-songs-link">
+                        <span class="fa fa-book"></span>
+                        <span>My Playlist</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="policies">
+            <ul>
+                <li>
+                    <a href="">Cookies</a>
+                </li>
+                <li>
+                    <a href="">Privacy</a>
+                </li>
+                <li>
+                    <a href="">.</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <h1>Main chali main chali&#127925;&#127925;</h1>
+                <h2>Are kidhar&#127925;</h2>
+                <h3>Gane sunne or kidhar&#127925;</h3>
+                <button id="loginButton" disabled></i></button>
+                <button id="signupButton" disabled></button>
+                <button id="signupButton" disabled></i></button>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Premium</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <div id="results"></div>
+        <ul id="playlistList"></ul>
+
+        <div class="spotify-playlists">
+            <h2>Khushi Playlists</h2>
+            <div class="list">
+                <!-- Playlist items yhase shuru -->
+                
+                
+                <div class="item">
+                    <img src="./images/diljitt.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>RapCaviar</h4>
+                    <p>New Music from Cardi B, Megan Thee Stallion an...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/All Out 2010s.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>All out 2010s</h4>
+                    <p>The biggest spmgs pf tje 2010s.</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Rock Classics.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Rock Classics</h4>
+                    <p>Rock Legends & epic songs that continue to...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Chill Hits.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Chill Hits</h4>
+                    <p>Kick back to the best new and recent chill hits</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Viva Latino.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Viva Latino</h4>
+                    <p>Today's top Latin hits elevando nuestra...</p>
+                </div>
+
+
+
+                <div class="item">
+                    <img src="./images/All Out 80s.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>All out 80s</h4>
+                    <p>The biggest songs of the 1980s. Cover: Michael...</p>
+                </div>
+                <div class="item">
+                    <img src="./images/All Out 2010s.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>All out 2010s</h4>
+                    <p>The biggest spmgs pf tje 2010s.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="spotify-playlists">
+            <h2>Focus</h2>
+            <div class="list">
+                <div class="item">
+                    <img src="./images/Peaceful Piano.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Peaceful Piano</h4>
+                    <p>Peaceful piano to help you slow down, breath...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Deep Focus.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Deep Focus</h4>
+                    <p>Keep calm and focus with ambient and post-...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Instrumental Study.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Instrumental Study</h4>
+                    <p>Focus with soft study music in the background.</p>
+                </div>
+
+
+
+                <div class="item">
+                    <img src="./images/Focus Flow.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Focus Flow</h4>
+                    <p>Uptempo instrumental hip hop beats</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Beats to think to.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Beats to think to</h4>
+                    <p>Focus with melodic techno and tech house.</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Reading Adventure.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Reading Adventure</h4>
+                    <p>Scores and soundtracks for daring quests, epic...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/Workday Lounge.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Workday Lounge</h4>
+                    <p>Lounge and chill out music for your workday</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="spotify-playlists">
+            <h2>Sound of India</h2>
+            <div class="list">
+                <div class="item">
+                    <img src="./images/The Sound of Mumbai.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Mum...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/The Sound of Kolkata.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Kolka...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/The Sound of Delhi.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Delhi...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/The Sound of Bengaluru.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Ben...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/The Sound of Chennai.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Chen...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+
+                <div class="item">
+                    <img src="./images/The Sound of Hyderabad.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>The Sound of Hyde...</h4>
+                    <p>The songs that define, unite and distinguish...</p>
+                </div>
+                
+
+
+            </div>
+ 
+            </div>
+        </div>
+       
+
+        <div class="audio-player-container">
+            <img id="albumImage" src="./images/diljitt.jpg" alt="Album Art">
+            <div class="audio-player-details">
+                <span id="trackName"></span>
+                <span id="trackArtists"></span>
+            </div>
+            <div class="audio-player-controls controls">
+                <button id="prevButton"><i class="fas fa-step-backward"></i></button>
+                <button id="playPauseButton"><i class="fas fa-play"></i></button>
+                <button id="nextButton"><i class="fas fa-step-forward"></i></button>
+                <button id="likeButton"><i class="fas fa-heart"></i></button>
+                <button id="playlistButton"><i class="fas fa-plus"></i></button>
+            </div>
+            
+            <audio id="audioPlayer" src="" controls></audio>
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        //new----------------------------------------------------------------------------------------------------------
+        //new----------------------------------------------------------------------------------------------------------
+
+        const clientId = '4fefc4ecab7f4394abd3f2c2f1ec1d82';
+const clientSecret = '7246f33d882241ecb46ce8664d66ad33';
+let accessToken = '';
+let currentTrackIndex = 0;
+let currentPlaylist = [];
+let playlists = [];
+let recentSearches = [];
+
+//  token lelia
+async function getToken() {
+  const result = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+    },
+    body: 'grant_type=client_credentials'
+  });
+
+  const data = await result.json();
+  accessToken = data.access_token;
+}
+
+//  songs search kro
+async function search(query) {
+  const result = await fetch(`https://api.spotify.com/v1/search?q=${query}&type=track,artist`, {
+    method: 'GET',
+    headers: { 'Authorization': 'Bearer ' + accessToken }
+  });
+
+  const data = await result.json();
+  return data.tracks.items;
+}
+
+// Render kr
+function renderResults(tracks) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  tracks.forEach((track, index) => {
+    const item = document.createElement('div');
+    item.classList.add('result-item');
+
+    const img = document.createElement('img');
+    img.src = track.album.images[0].url;
+    item.appendChild(img);
+
+    const name = document.createElement('span');
+    name.innerText = track.name;
+    item.appendChild(name);
+
+    item.addEventListener('click', () => playTrack(track, index));
+
+    resultsDiv.appendChild(item);
+  });
+
+  currentPlaylist = tracks;
+}
+
+// Play itbebe
+
+
+
+
+
+function playTrack(track, index) {
+  const audioPlayer = document.getElementById('audioPlayer');
+  const albumImage = document.getElementById('albumImage');
+  const trackName = document.getElementById('trackName');
+  const trackArtists = document.getElementById('trackArtists');
+
+  currentTrackIndex = index;
+  audioPlayer.src = track.preview_url;
+  albumImage.src = track.album.images[0].url;
+  trackName.innerText = track.name;
+  trackArtists.innerText = track.artists.map(artist => artist.name).join(', ');
+
+  audioPlayer.play();
+}
+
+        //new----------------------------------------------------------------------------------------------------------
+        //new----------------------------------------------------------------------------------------------------------
+        
+    
+        // Create a new playlist
+      
+    
+        // Save recent searches
+        function saveRecentSearch(query) {
+          recentSearches.push(query);
+          if (recentSearches.length > 5) {
+            recentSearches.shift();
+          }
+          renderRecentSearches();
+        }
+    
+        // Render 
+        function renderRecentSearches() {
+          const recentSearchesDiv = document.getElementById('recentSearches');
+          recentSearchesDiv.innerHTML = '';
+    
+          recentSearches.forEach(search => {
+            const item = document.createElement('div');
+            item.innerText = search;
+            item.addEventListener('click', async () => {
+              const tracks = await search(search);
+              renderResults(tracks);
+            });
+            recentSearchesDiv.appendChild(item);
+          });
+        }
+    
+        // Playback controls
+        document.getElementById('playPauseButton').addEventListener('click', () => {
+          const audioPlayer = document.getElementById('audioPlayer');
+          if (audioPlayer.paused) {
+            audioPlayer.play();
+          } else {
+            audioPlayer.pause();
+          }
+        });
+    
+        document.getElementById('nextButton').addEventListener('click', () => {
+          if (currentTrackIndex < currentPlaylist.length - 1) {
+            playTrack(currentPlaylist[currentTrackIndex + 1], currentTrackIndex + 1);
+          }
+        });
+    
+        document.getElementById('prevButton').addEventListener('click', () => {
+          if (currentTrackIndex > 0) {
+            playTrack(currentPlaylist[currentTrackIndex - 1], currentTrackIndex - 1);
+          }
+        });
+    
+        // Search button_wala click event
+        document.getElementById('searchButton').addEventListener('click', async () => {
+          const query = document.getElementById('search').value;
+          if (query) {
+            const tracks = await search(query);
+            renderResults(tracks);
+            saveRecentSearch(query);
+          }
+        });
+    
+        // Like button_wala click event
+        document.getElementById('likeButton').addEventListener('click', () => {
+          const track = currentPlaylist[currentTrackIndex];
+          if (track) {
+            toggleLike(track);
+          }
+        });
+    
+        // Login button_wala click event
+        document.getElementById('loginButton').addEventListener('click', () => login(false));
+    
+        // Signup button_wala click event
+        document.getElementById('signupButton').addEventListener('click', () => login(true));
+    
+        // Initialize
+        getToken();
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseButton = document.getElementById('playPauseButton');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const likeButton = document.getElementById('likeButton');
+    const progressBar = document.getElementById('progressBar');
+    const currentTimeDisplay = document.getElementById('currentTime');
+    const durationDisplay = document.getElementById('duration');
+    const trackName = document.getElementById('trackName');
+    const trackArtists = document.getElementById('trackArtists');
+    const albumImage = document.getElementById('albumImage');
+
+    let isPlaying = false;
+    let likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+    let currentTrackIndex = 0;
+    let currentPlaylist = []; 
+
+    function updateUI() {
+        const currentTime = audioPlayer.currentTime;
+        const duration = audioPlayer.duration;
+        progressBar.value = (currentTime / duration) * 100;
+        currentTimeDisplay.innerText = formatTime(currentTime);
+        durationDisplay.innerText = formatTime(duration);
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function updateLikeButton() {
+        if (audioPlayer.src) {
+            const currentTrackSrc = audioPlayer.src;
+            const isLiked = likedSongs.some(song => song.src === currentTrackSrc);
+            likeButton.innerText = isLiked ? '❤️' : '♡';
+        }
+    }
+
+    function toggleLike(track) {
+        const trackExists = likedSongs.find(song => song.src === track.src);
+        if (!trackExists) {
+            likedSongs.push(track);
+            localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
+            likeButton.innerText = '❤️'; // Liked
+        } else {
+            likedSongs = likedSongs.filter(song => song.src !== track.src);
+            localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
+            likeButton.innerText = '♡'; // Unliked
+        }
+    }
+
+    playPauseButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audioPlayer.pause();
+            playPauseButton.innerHTML = '<i class="fa fa-play"></i>';
+        } else {
+            audioPlayer.play();
+            playPauseButton.innerHTML = '<i class="fa fa-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    prevButton.addEventListener('click', () => {
+        // Logic to go to the previous track
+    });
+
+    nextButton.addEventListener('click', () => {
+        // Logic to go to the next track
+    });
+
+    likeButton.addEventListener('click', () => {
+        if (audioPlayer.src) {
+            const currentTrack = {
+                name: trackName.innerText,
+                artists: trackArtists.innerText,
+                albumImage: albumImage.src,
+                src: audioPlayer.src
+            };
+            toggleLike(currentTrack);
+        }
+    });
+
+    audioPlayer.addEventListener('timeupdate', updateUI);
+
+    progressBar.addEventListener('input', () => {
+        audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration;
+    });
+
+    // Initialize like button state
+    updateLikeButton();
+});
+//  plylist_wala_section
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const playlistButton = document.getElementById('playlistButton');
+    const addSongForm = document.getElementById('addSongForm');
+    const playlistSelect = document.getElementById('playlistSelect');
+
+    // Load playlists into dropdown
+    function loadPlaylists() {
+        const playlists = JSON.parse(localStorage.getItem('playlists')) || {};
+        playlistSelect.innerHTML = ''; // Clear existing options
+
+        for (const name in playlists) {
+            const option = document.createElement('option');
+            option.value = name;
+            option.textContent = name;
+            playlistSelect.appendChild(option);
+        }
+    }
+
+    // Create a new playlist
+
+    function addToPlaylist(track) {
+    let playlists = JSON.parse(localStorage.getItem('playlists')) || {}; // Retrieve existing playlists or initialize to an empty object
+    const playlistName = prompt('Enter the name of the playlist to add this track to:');
+    
+    if (playlists[playlistName]) {
+        // If the playlist exists, add the track
+        playlists[playlistName].push(track);
+        localStorage.setItem('playlists', JSON.stringify(playlists));
+        alert('Track added to the playlist!');
+    } else {
+        // If the playlist does not exist, prompt to create a new one
+        if (confirm(`Playlist "${playlistName}" not found. Would you like to create a new playlist?`)) {
+            const newPlaylistName = prompt('Enter a name for your new playlist:');
+            if (newPlaylistName) {
+                playlists[newPlaylistName] = [track]; // Create a new playlist and add the track
+                localStorage.setItem('playlists', JSON.stringify(playlists));
+                alert(`Playlist "${newPlaylistName}" created and track added successfully!`);
+                loadPlaylists(); // Refresh dropdown or any UI element showing playlists
+            } else {
+                alert('No name entered. Playlist not created.');
+            }
+        }
+    }
+}
+
+// Assuming 'playlistButton' is the button to add the track to a playlist
+playlistButton.addEventListener('click', () => {
+    const track = currentPlaylist[currentTrackIndex];
+    if (track) {
+        addToPlaylist(track);
+    }
+});
+
+   
+        // Add track to a playlist
+
+  
+    
+  
+  //--------------------------------------------------------------------
+      //  if (playlistName) {
+         //  let playlists = JSON.parse(localStorage.getItem('playlists')) || {};
+         //   if (!playlists[playlistName]) { // Check if playlist already exists
+         //       playlists[playlistName] = [];
+         //       localStorage.setItem('playlists', JSON.stringify(playlists));
+       //         alert(`Playlist "${playlistName}" created successfully!`);
+         //       loadPlaylists(); // Refresh dropdown
+          //  } else {
+          //      alert('Playlist already exists.');
+           // }
+  //      }
+ //   });
+    }
+)
+    // Adding song to selected playlist
+    addSongForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const playlistName = playlistSelect.value;
+        if (!playlistName) {
+            alert('Please select a playlist.');
+            return;
+        }
+
+        const song = {
+            src: document.getElementById('audioPlayer').src,
+            albumImage: document.getElementById('albumImage').src,
+            trackName: document.getElementById('trackName').textContent,
+            trackArtists: document.getElementById('trackArtists').textContent
+        };
+
+        console.log('Adding song:', song); 
+
+        const playlists = JSON.parse(localStorage.getItem('playlists')) || {};
+        if (playlists[playlistName]) {
+            playlists[playlistName].push(song);
+            localStorage.setItem('playlists', JSON.stringify(playlists));
+            console.log('Playlists after adding song:', playlists); // Debugging line
+            alert('Song added successfully!');
+            addSongForm.reset(); // Clear form fields
+        } else {
+            alert('Playlist not found.');
+        }
+    });
+
+    // Initial load
+    loadPlaylists();
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

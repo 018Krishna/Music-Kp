@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Details</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .shuffle-button {
+            background-color: #1db954;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px 0;
+            display: block;
+            text-align: center;
+        }
+        .shuffle-button:hover {
+            background-color: #17a143;
+        }
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .song-item {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 200px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .song-item:hover {
+            transform: scale(1.05);
+        }
+        .song-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .song-info {
+            flex: 1;
+        }
+        .song-name {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .song-button {
+            background-color: #ff4b5c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .song-button:hover {
+            background-color: #ff1e2d;
+        }
+        .play-button {
+            background-color: #1db954;
+            color: #ffffff;
+        }
+        .play-button:hover {
+            background-color: #17a143;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="playlist-name">Playlist</h1>
+<!-----------<button class="shuffle-button" id="shuffle-play-button">Shuffle Play</button>--------->
+    <ul id="song-list" class="song-list"></ul>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const playlistName = params.get('name');
+            const playlistNameElement = document.getElementById('playlist-name');
+            playlistNameElement.textContent = playlistName;
+
+            const songListElement = document.getElementById('song-list');
+            const playlists = JSON.parse(localStorage.getItem('playlists')) || {};
+            const songs = playlists[playlistName] || [];
+
+       /*     // Shuffle play button
+            const shufflePlayButton = document.getElementById('shuffle-play-button');
+            shufflePlayButton.addEventListener('click', () => {
+                shufflePlay(songs);
+            });
+---------------------------------*/
+            songs.forEach((song, index) => {
+                const songItem = document.createElement('li');
+                songItem.className = 'song-item';
+
+                const songImage = document.createElement('img');
+                songImage.className = 'song-image';
+                songImage.src =` https://picsum.photos/seed/${encodeURIComponent(song.name)}/200/150`; // Random image generate krli
+                songImage.alt = song.name;
+
+                const songInfo = document.createElement('div');
+                songInfo.className = 'song-info';
+
+                const songName = document.createElement('strong');
+                songName.className = 'song-name';
+                songName.textContent = song.name;
+
+                songInfo.appendChild(songName);
+
+                const playButton = document.createElement('button');
+              /*----------  playButton.className = 'song-button play-button';
+                playButton.textContent = 'Play';---------------
+                playButton.addEventListener('click', () => {
+                    playSong(song);--------
+                });---*/
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'song-button delete-button';
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    songs.splice(index, 1);
+                    playlists[playlistName] = songs;
+                    localStorage.setItem('playlists', JSON.stringify(playlists));
+                    window.location.reload();
+                });
+
+                songItem.appendChild(songImage);
+                songItem.appendChild(songInfo);
+                songItem.appendChild(playButton);
+                songItem.appendChild(deleteButton);
+                songListElement.appendChild(songItem);
+            });
+        });
+
+      /*  function shufflePlay(songs) {
+            if (songs.length === 0) {
+                alert('This playlist is empty.');
+                return;
+            }
+            const shuffledSongs = songs.sort(() => Math.random() - 0.5);
+            console.log('Playing shuffled playlist:', shuffledSongs);
+            // Implement the logic to play the shuffled songs here.
+        }
+
+        function playSong(song) {
+            console.log('Playing song:', song);
+            // Implement the logic to play the song here.
+        }----------------------*/
+    </script>
+</body>
+</html>

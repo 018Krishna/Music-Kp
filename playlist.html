@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlists</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .playlist {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .playlist-item {
+            background-color: #d100d1;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .playlist-item:hover {
+            transform: scale(1.05);
+        }
+        .playlist-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .playlist-name {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .playlist-button {
+            background-color: #fff;
+            color: #1db954;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px 0;
+            width: 80%;
+        }
+        .playlist-button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Playlists</h1>
+    <ul id="playlist" class="playlist"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const playlistElement = document.getElementById('playlist');
+
+            const playlists = JSON.parse(localStorage.getItem('playlists')) || {};
+
+            for (const [name, songs] of Object.entries(playlists)) {
+                const listItem = document.createElement('li');
+                listItem.className = 'playlist-item';
+
+                const playlistImage = document.createElement('img');
+                playlistImage.className = 'playlist-image';
+                playlistImage.src =` https:picsum.photos/seed/${encodeURIComponent(name)}/200/150`; // Random image generate krli
+                playlistImage.alt = name;
+
+                const playlistName = document.createElement('strong');
+                playlistName.className = 'playlist-name';
+                playlistName.textContent = name;
+
+                const viewButton = document.createElement('button');
+                viewButton.className = 'playlist-button';
+                viewButton.textContent = 'View Playlist';
+                viewButton.addEventListener('click', () => {
+                    window.location.href = `playlist-detail.html?name=${encodeURIComponent(name)}`;
+                });
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'playlist-button';
+                deleteButton.textContent = 'Delete Playlist';
+                deleteButton.addEventListener('click', () => {
+                    if (confirm(`Are you sure you want to delete the playlist "${name}"?`)) {
+                        delete playlists[name];
+                        localStorage.setItem('playlists', JSON.stringify(playlists));
+                        window.location.reload();
+                    }
+                });
+
+                const shuffleButton = document.createElement('button');
+              //  shuffleButton.className = 'playlist-button';
+                //shuffleButton.textContent = 'Shuffle Play';
+                //sh//uffleButton.addEventListener('click', () => {
+               //     shufflePlay(songs);
+               // });
+
+                listItem.appendChild(playlistImage);
+                listItem.appendChild(playlistName);
+                listItem.appendChild(viewButton);
+               // listItem.appendChild(shuffleButton);
+                listItem.appendChild(deleteButton);
+                playlistElement.appendChild(listItem);
+            }
+        });
+
+        
+    </script>
+</body>
+</html>
